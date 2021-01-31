@@ -4,9 +4,45 @@
 
 {% block content%}
 <div class="container my-4">
+<h2 class="mx-auto text-center my-4">Shorten your URL's right now, with sky.co!</h2>
     <div class="row">
         <div class="col-12 col-md-10 col-lg-8 mx-auto my-4">
-            <h4 class="text-center mb-4">Welcome to the features page!</h4>
+            <div class="row">
+                <div class="col-12 mx-auto text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Features of Skyco</h5>
+                        </div>
+                        <div class="card-body">
+                            <ol class="list-unstyled">
+                                <li><strong>Ad Free!</strong></li>
+                                <li><strong>Open Source</strong></li>
+                                <li><strong>Made with ❤ in India</strong></li>
+                                <li><strong>Always free for personal use! :D</strong></li>
+                                <li><strong>Fork it and make it your own! :)</strong></li>
+                                <li><strong>Shorten your long urls instantly!</strong></li>
+                                <li><strong>Get started for personal use in Minutes!</strong></li>
+                            </ol>          
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <a href="{% url 'home_page' %}" class="btn btn-primary">Visit Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <a href="{% url 'home_page' %}" class="btn btn-primary">Visit Discord</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
