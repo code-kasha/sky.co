@@ -7,7 +7,7 @@
     <h2 class="mx-auto text-center my-4">Shorten your URL's right now, with sky.co!</h2>
     <div class="row">
         <div class="col-12 col-md-10 col-lg-8 mx-auto my-4">
-            <h4 class="text-center mb-4">Let's get started!</h4>
+            <h4 class="text-center mb-4">Let's get started{% if user.is_authenticated %}, {{user}}{% endif %}!</h4>
             {% include 'snippets/form.html' %}
         </div>
     </div>

@@ -1,6 +1,8 @@
 {% url 'home_page' as home_url %}
 {% url 'features_page' as features_url %}
 {% url 'pricing_page' as pricing_url %}
+{% url 'login' as login_url %}
+{% url 'logout' as logout_url %}
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -19,13 +21,22 @@
         <li class="nav-item">
           <a class="nav-link px-2 {% if request.path == pricing_url %} active {% endif %}" href="{{pricing_url}}">Pricing</a>
         </li>
-        
         {% if user.is_superuser %}
-            <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link px-2" href="/admin/">Admin</a>
-            </li>
+          </li>
         {% endif %}
-            
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link px-2" href="{{logout_url}}">Logout</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link px-2 {% if request.path == login_url %} active {% endif %}" href="{{login_url}}">Login</a>
+            </li>
+          {% endif %}
       </ul>
     </div>
   </div>

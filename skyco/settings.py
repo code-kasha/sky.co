@@ -2,6 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
 with open(BASE_DIR / '.key') as f:
     SECRET_KEY = f.read().strip()
 
