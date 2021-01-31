@@ -1,0 +1,25 @@
+{% url 'home_page' as home_url %}
+{% url 'features_page' as features_url %}
+{% url 'pricing_page' as pricing_url %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand px-3 mx-3">adco</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link px-2 {% if request.path == home_url %} active {% endif %}" href="{{home_url}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 {% if request.path == features_url %} active {% endif %}" href="{{features_url}}">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 {% if request.path == pricing_url %} active {% endif %}" href="{{pricing_url}}">Pricing</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
